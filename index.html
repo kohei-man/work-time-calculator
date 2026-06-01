@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>勤務時間計算ツール</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>勤務時間計算ツール</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
 <body>
-    <h1>勤務時間計算ツール</h1>
+    <div class="container">
+        <h1>勤務時間計算ツール</h1>
 
     <div>
-        <label>出勤時間</label>
-        <input type="time">
+        <label>出勤時間：</label>
+        <input type="time" id="startTime">
     </div>
 
     <br>
 
     <div>
-        <label>退勤時間</label>
-        <input type="time">
+        <label>退勤時間：</label>
+        <input type="time" id="endTime">
     </div>
 
     <br>
 
-    <button>計算</button>
+    <div>
+        <label>休憩時間（分）：</label>
+        <input type="number" id="breakTime" value="60">
+    </div>
+
+    <br>
+
+    <button onclick="calculateWorkTime()">計算</button>
+
+    <h2 id="result"></h2>
+
+    <h2>履歴</h2>
+
+    <ul id="historyList"></ul>
+
+    <script src="script.js"> </script>
+
+    </div>
 </body>
 </html>
